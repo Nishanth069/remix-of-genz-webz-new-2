@@ -1,49 +1,69 @@
+"use client";
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const BenefitsSection = () => {
+  const benefits = [
+    {
+      title: "Hyper-Productivity",
+      description: "Automate the mundane with neural-precision workflows that liberate your team for high-level strategy.",
+      delay: 0.1
+    },
+    {
+      title: "Sensory UX",
+      description: "Deliver interfaces that respond with human-like intuition, building immediate trust and brand loyalty.",
+      delay: 0.2
+    },
+    {
+      title: "Economic Elasticity",
+      description: "Optimize resources with intelligent scaling, reducing overhead while maximizing performance output.",
+      delay: 0.3
+    }
+  ];
+
   return (
-    <section className="mx-auto max-w-7xl px-6 py-20">
-      <div className="mb-12 space-y-4 text-center">
-        <p className="animate-fade-in text-sm font-semibold uppercase text-purple-400">
-          Impact
-        </p>
-        <h2 className="animate-fade-in-up text-4xl font-bold text-white">
-          Powerful Benefits That Drive Real Impact
-        </h2>
+    <section className="mx-auto max-w-7xl px-6 py-40">
+      <div className="mb-24 space-y-6 text-center">
+        <motion.p 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-purple-500 font-mono text-[10px] uppercase tracking-[0.5em]"
+        >
+          Performance Metrics
+        </motion.p>
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl md:text-6xl font-bold text-white tracking-tighter"
+        >
+          Architected for <span className="italic text-purple-500">Global Impact.</span>
+        </motion.h2>
       </div>
-      <div className="grid gap-8 md:grid-cols-3">
-        <div
-          className="animate-fade-in-up space-y-4 rounded-lg border border-slate-800 bg-slate-900/50 p-6 transition-all duration-500 ease-in-out hover:scale-105 hover:border-purple-500 hover:bg-slate-800/40"
-          style={{ animationDelay: '100ms' }}
-        >
-          <h3 className="text-xl font-bold text-white">Increased Productivity</h3>
-          <p className="text-gray-400">
-            Automate repetitive tasks and free your team to focus on high-impact
-            strategic work that drives growth.
-          </p>
-        </div>
-        <div
-          className="animate-fade-in-up space-y-4 rounded-lg border border-slate-800 bg-slate-900/50 p-6 transition-all duration-500 ease-in-out hover:scale-105 hover:border-purple-500 hover:bg-slate-800/40"
-          style={{ animationDelay: '200ms' }}
-        >
-          <h3 className="text-xl font-bold text-white">
-            Improved Customer Experience
-          </h3>
-          <p className="text-gray-400">
-            Deliver faster, smarter responses to customer needs with AI-powered
-            intelligence and personalization.
-          </p>
-        </div>
-        <div
-          className="animate-fade-in-up space-y-4 rounded-lg border border-slate-800 bg-slate-900/50 p-6 transition-all duration-500 ease-in-out hover:scale-105 hover:border-purple-500 hover:bg-slate-800/40"
-          style={{ animationDelay: '300ms' }}
-        >
-          <h3 className="text-xl font-bold text-white">Cost Efficiency</h3>
-          <p className="text-gray-400">
-            Reduce operational overhead and optimize resource utilization with
-            intelligent automation and smart scaling.
-          </p>
-        </div>
+      <div className="grid gap-12 md:grid-cols-3">
+        {benefits.map((benefit, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: benefit.delay }}
+            className="group relative p-12 rounded-[2.5rem] border border-white/10 bg-white/5 hover:bg-white/[0.08] hover:border-purple-500/50 transition-all duration-500"
+          >
+            <div className="absolute top-0 right-0 p-8 text-white/5 font-mono text-4xl group-hover:text-purple-500/20 transition-colors">
+              0{i+1}
+            </div>
+            <div className="space-y-6 relative z-10">
+              <h3 className="text-2xl font-bold text-white tracking-tight group-hover:text-purple-400 transition-colors">{benefit.title}</h3>
+              <p className="text-white/40 font-light leading-relaxed">
+                {benefit.description}
+              </p>
+            </div>
+            <div className="mt-8 h-px w-12 bg-white/10 group-hover:w-full group-hover:bg-purple-500/30 transition-all duration-700" />
+          </motion.div>
+        ))}
       </div>
     </section>
   );
