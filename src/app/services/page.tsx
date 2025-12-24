@@ -8,170 +8,179 @@ import { Globe, Smartphone, Palette, Zap, Database, Shield, ArrowRight } from 'l
 import Link from 'next/link';
 
 const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1] as const } }
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
 };
 
 const staggerContainer = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.12 } }
+  visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
 };
 
 const services = [
   {
     icon: Globe,
-    title: "Web Development",
-    description: "Custom websites and web applications built with modern technologies for optimal performance and user experience.",
-    features: ["Responsive Design", "Fast Loading", "SEO Optimized", "Secure & Scalable"]
+    title: "Web Ecosystems",
+    description: "Architecting high-performance digital environments that serve as the backbone for global enterprises.",
+    features: ["Neural Interfaces", "Sub-second Latency", "Elastic Scaling", "Enterprise Grade"]
   },
   {
     icon: Smartphone,
-    title: "Mobile Apps",
-    description: "Native and cross-platform mobile applications that deliver seamless experiences across all devices.",
-    features: ["iOS & Android", "Cross-Platform", "Offline Support", "Push Notifications"]
+    title: "Mobile Intelligence",
+    description: "Developing native applications that bridge the gap between human intent and software precision.",
+    features: ["iOS & Android", "Real-time Sync", "Edge Computing", "Biometric Security"]
   },
   {
     icon: Palette,
-    title: "UI/UX Design",
-    description: "Beautiful, intuitive interfaces that enhance user engagement and drive conversions.",
-    features: ["User Research", "Wireframing", "Prototyping", "Design Systems"]
+    title: "Design Systems",
+    description: "Creating visual languages that communicate authority and inspire absolute brand loyalty.",
+    features: ["Sensory UX", "Dynamic Branding", "Motion Protocols", "Visual Identity"]
   },
   {
     icon: Zap,
-    title: "Digital Solutions",
-    description: "Comprehensive digital transformation services to modernize your business operations.",
-    features: ["Process Automation", "Digital Strategy", "Cloud Migration", "Analytics"]
+    title: "Neural Automation",
+    description: "Deploying AI-driven workflows that transform complex processes into effortless productivity.",
+    features: ["Process Evolution", "Smart Logic", "Zero Friction", "Predictive Analytics"]
   },
   {
     icon: Database,
-    title: "Backend Systems",
-    description: "Robust server-side architecture and database solutions for reliable performance.",
-    features: ["API Development", "Database Design", "Cloud Infrastructure", "Microservices"]
+    title: "Backend Core",
+    description: "Systems engineered for absolute stability, processing millions of requests with cryptographic safety.",
+    features: ["Secure API", "Microservices", "Cloud Native", "Database Logic"]
   },
   {
     icon: Shield,
-    title: "Branding",
-    description: "Complete brand identity development that communicates your unique value proposition.",
-    features: ["Logo Design", "Brand Guidelines", "Visual Identity", "Marketing Materials"]
+    title: "Digital Strategy",
+    description: "Defining the trajectory for market leaders through data-driven insights and technical audits.",
+    features: ["Market Analysis", "Growth Logic", "Security Audits", "Scalability Roadmap"]
   }
 ];
 
 export default function ServicesPage() {
     return (
       <SmoothTransitionsProvider>
-        <div className="min-h-screen bg-black text-white antialiased">
+        <div className="min-h-screen bg-black text-white antialiased selection:bg-purple-500 selection:text-white">
           <Header />
           <main>
-          <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-950/20 via-black to-black" />
-            <div className="absolute inset-0">
-              <div className="absolute top-1/3 left-1/3 w-80 h-80 bg-purple-600/10 rounded-full blur-[100px] animate-pulse" />
-              <div className="absolute bottom-1/3 right-1/3 w-72 h-72 bg-violet-600/10 rounded-full blur-[80px] animate-pulse" style={{ animationDelay: '1s' }} />
-            </div>
-            
-            <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={staggerContainer}
-                className="space-y-6"
-              >
-                <motion.span
-                  variants={fadeInUp}
-                  className="inline-block text-sm font-semibold uppercase tracking-[0.2em] text-purple-400 border border-purple-500/30 px-4 py-2 rounded-full"
+            {/* Hero Section */}
+            <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
+              <div className="absolute inset-0 z-0">
+                <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px] animate-pulse" />
+                <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[150px]" />
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20" />
+              </div>
+              
+              <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+                <motion.div
+                  initial="hidden"
+                  animate="visible"
+                  variants={staggerContainer}
+                  className="space-y-12"
                 >
-                  Our Services
-                </motion.span>
-                
-                <motion.h1
-                  variants={fadeInUp}
-                  className="text-5xl md:text-7xl font-bold leading-tight bg-gradient-to-r from-white via-white to-purple-200 bg-clip-text text-transparent"
-                >
-                  What We Do Best
-                </motion.h1>
-                
-                <motion.p
-                  variants={fadeInUp}
-                  className="text-xl text-gray-400 max-w-2xl mx-auto"
-                >
-                  End-to-end digital solutions crafted with precision, designed for impact.
-                </motion.p>
-              </motion.div>
-            </div>
-          </section>
-
-          <section className="py-24">
-            <div className="max-w-7xl mx-auto px-6">
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
-                variants={staggerContainer}
-                className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-              >
-                {services.map((service, index) => (
-                  <motion.div
-                    key={index}
-                    variants={fadeInUp}
-                    className="group relative bg-gradient-to-br from-slate-900/80 to-slate-900/40 border border-slate-800 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(147,51,234,0.15)]"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
-                    <div className="relative z-10 space-y-5">
-                      <div className="w-14 h-14 bg-purple-600/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <service.icon className="w-7 h-7 text-purple-400" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-                      <p className="text-gray-400 leading-relaxed">{service.description}</p>
-                      <ul className="space-y-2 pt-2">
-                        {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                            <div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                  <motion.div variants={fadeInUp} className="flex justify-center">
+                    <span className="px-5 py-2 rounded-full border border-purple-500/30 bg-purple-500/10 text-[10px] font-bold tracking-[0.4em] uppercase text-purple-400">
+                      Our Capabilities
+                    </span>
                   </motion.div>
-                ))}
-              </motion.div>
-            </div>
-          </section>
+                  
+                  <motion.h1
+                    variants={fadeInUp}
+                    className="text-6xl md:text-[9rem] font-bold tracking-tighter leading-[0.8] text-white"
+                  >
+                    ENGINEERED <br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-400 to-purple-800">SUCCESS.</span>
+                  </motion.h1>
+                  
+                  <motion.p
+                    variants={fadeInUp}
+                    className="text-lg md:text-2xl text-white/50 max-w-3xl mx-auto leading-relaxed font-light tracking-tight"
+                  >
+                    We provide the technical infrastructure and design precision needed to dominate the digital landscape.
+                  </motion.p>
+                </motion.div>
+              </div>
+            </section>
 
-          <section className="py-24">
-            <div className="max-w-4xl mx-auto px-6">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-950/50 via-slate-900 to-slate-900 border border-purple-500/20 p-12 md:p-16 text-center"
-              >
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(147,51,234,0.15),transparent_50%)]" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(124,58,237,0.1),transparent_50%)]" />
-                
-                <div className="relative z-10 space-y-6">
-                  <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-                    Ready to Start Your Project?
-                  </h2>
-                  <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-                    Let's discuss how we can help bring your vision to life with our expertise.
-                  </p>
-                  <div className="pt-4">
-                    <Link
-                      href="/contact"
-                      className="inline-flex items-center gap-2 bg-purple-600 text-white font-semibold px-8 py-4 rounded-full hover:bg-purple-500 transition-all duration-300 hover:shadow-[0_0_30px_rgba(147,51,234,0.4)] hover:scale-105"
+            <section className="py-40 bg-black">
+              <div className="max-w-7xl mx-auto px-6">
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-50px" }}
+                  variants={staggerContainer}
+                  className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                  {services.map((service, index) => (
+                    <motion.div
+                      key={index}
+                      variants={fadeInUp}
+                      className="group relative p-12 rounded-[2.5rem] border border-white/10 bg-white/5 hover:bg-white/[0.08] hover:border-purple-500/50 transition-all duration-500"
                     >
-                      Get in Touch
-                      <ArrowRight className="w-5 h-5" />
-                    </Link>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </section>
-        </main>
-        <Footer />
-      </div>
-    </SmoothTransitionsProvider>
-  );
+                      <div className="relative z-10 space-y-8">
+                        <div className="w-16 h-16 bg-black border border-white/5 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                          <service.icon className="w-8 h-8 text-purple-500" />
+                        </div>
+                        <div className="space-y-4">
+                          <h3 className="text-2xl font-bold text-white tracking-tight">{service.title}</h3>
+                          <p className="text-white/40 font-light leading-relaxed">{service.description}</p>
+                        </div>
+                        <ul className="space-y-3 pt-4">
+                          {service.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-center gap-3 text-[11px] font-mono uppercase tracking-widest text-white/30 group-hover:text-purple-400 transition-colors">
+                              <div className="w-1 h-1 bg-purple-500 rounded-full" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="mt-10 h-px w-12 bg-white/10 group-hover:w-full group-hover:bg-purple-500/30 transition-all duration-700" />
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="py-40 relative overflow-hidden">
+               <div className="absolute inset-0 bg-purple-900/10 blur-[120px] opacity-30 -z-10" />
+              <div className="max-w-7xl mx-auto px-6 text-center space-y-16">
+                <motion.h2 
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                  className="text-6xl md:text-[9rem] font-bold tracking-tighter leading-[0.85] text-white"
+                >
+                  LET'S BUILD <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-800">TOGETHER.</span>
+                </motion.h2>
+                
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="flex flex-col sm:flex-row items-center justify-center gap-10 pt-10"
+                >
+                  <Link
+                    href="/contact"
+                    className="group relative px-14 py-7 bg-white text-black font-bold uppercase tracking-[0.2em] text-[11px] rounded-full overflow-hidden hover:scale-105 transition-all"
+                  >
+                    <span className="relative z-10">Initialize Project</span>
+                    <div className="absolute inset-0 bg-purple-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                  </Link>
+                  <Link
+                    href="/#crafted"
+                    className="text-[11px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors border-b border-white/0 hover:border-white pb-2"
+                  >
+                    Browse Portfolio
+                  </Link>
+                </motion.div>
+              </div>
+            </section>
+          </main>
+          <Footer />
+        </div>
+      </SmoothTransitionsProvider>
+    );
 }
