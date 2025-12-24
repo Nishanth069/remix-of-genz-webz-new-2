@@ -1,7 +1,17 @@
 "use client";
 import Link from "next/link";
-
 import { useRef, useEffect } from "react";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
+};
 
 const HeroSection = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -37,7 +47,7 @@ const HeroSection = () => {
 
         const init = () => {
             stars = [];
-            const numberOfStars = 400; // Sharp, clear white dots
+            const numberOfStars = 400;
 
             for (let i = 0; i < numberOfStars; i++) {
                 stars.push({
@@ -53,7 +63,6 @@ const HeroSection = () => {
         const animate = () => {
             animationFrameId = requestAnimationFrame(animate);
             
-            // Pure black background
             ctx.fillStyle = "#000000";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -62,35 +71,27 @@ const HeroSection = () => {
 
             for (let i = stars.length - 1; i >= 0; i--) {
                 const star = stars[i];
-                
-                // Move star toward viewer (coming out of screen)
                 star.z -= star.speed;
                 
-                // Reset star if it goes past viewer
                 if (star.z <= 0) {
                     star.x = (Math.random() - 0.5) * canvas.width * 2;
                     star.y = (Math.random() - 0.5) * canvas.height * 2;
                     star.z = canvas.width;
                 }
                 
-                // Calculate 3D projection
                 const k = 128 / star.z;
                 const px = star.x * k + centerX;
                 const py = star.y * k + centerY;
                 
-                // Only draw stars within viewport
                 if (px >= 0 && px <= canvas.width && py >= 0 && py <= canvas.height) {
-                    // Calculate size and opacity based on depth
                     const size = (1 - star.z / canvas.width) * star.size * 2;
                     const opacity = (1 - star.z / canvas.width) * 0.8 + 0.2;
                     
-                    // Draw sharp, clear white dot
                     ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
                     ctx.beginPath();
                     ctx.arc(px, py, Math.max(size, 0.5), 0, Math.PI * 2);
                     ctx.fill();
                     
-                    // Add motion trail for stars coming toward viewer
                     if (star.z < canvas.width * 0.3) {
                         const trailLength = (1 - star.z / (canvas.width * 0.3)) * 20;
                         const prevK = 128 / (star.z + star.speed);
@@ -129,27 +130,58 @@ const HeroSection = () => {
         <section className="relative flex items-center justify-center min-h-screen overflow-hidden bg-black">
             <div className="absolute inset-0 z-0">
                 <canvas ref={canvasRef} className="w-full h-full" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/40 to-black" />
+                {/* Elegant Background elements */}
+                <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px] animate-pulse" />
+                <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[150px]" />
             </div>
-            <div className="relative z-10 px-6 py-20 text-center md:py-32">
-                <div className="max-w-4xl mx-auto space-y-6">
-                    <h1 className="text-4xl font-bold tracking-tight text-white fade-in md:text-6xl">
-                        Engineering intelligence into effortless experiences.
-                    </h1>
-                    <p className="text-lg text-gray-400 fade-in-up">
-                        AI-Driven, Intelligent Software for Modern Challenges
-                    </p>
-                    <div className="flex justify-center gap-4 pt-6 fade-in-up-delay-1">
+            
+            <div className="relative z-10 px-6 py-20 text-center max-w-7xl mx-auto">
+                <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={staggerContainer}
+                    className="space-y-12"
+                >
+                    <motion.div variants={fadeInUp} className="flex justify-center">
+                        <span className="px-5 py-2 rounded-full border border-purple-500/30 bg-purple-500/10 text-[10px] font-bold tracking-[0.4em] uppercase text-purple-400">
+                            Innovation Hub 2025
+                        </span>
+                    </motion.div>
+
+                    <motion.h1 
+                        variants={fadeInUp}
+                        className="text-5xl md:text-[8rem] font-bold tracking-tighter leading-[0.85] text-white"
+                    >
+                        ENGINEERING <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-400 to-purple-800">EXPERIENCES.</span>
+                    </motion.h1>
+
+                    <motion.p 
+                        variants={fadeInUp}
+                        className="text-lg md:text-2xl text-white/50 max-w-3xl mx-auto leading-relaxed font-light tracking-tight"
+                    >
+                        We architect high-performance digital ecosystems where intelligence meets human elegance.
+                    </motion.p>
+
+                    <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row justify-center gap-8 pt-6">
                         <Link href="/contact">
-                        <button className="px-8 py-3 font-semibold text-white transition-all duration-300 ease-in-out bg-purple-600 rounded-md hover:scale-105 hover:bg-purple-700">
-                            Get Started
-                        </button>
+                            <button className="group relative px-12 py-6 bg-white text-black font-bold uppercase tracking-[0.2em] text-[10px] rounded-full overflow-hidden hover:scale-105 transition-all">
+                                <span className="relative z-10">Get Started</span>
+                                <div className="absolute inset-0 bg-purple-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                            </button>
                         </Link>
                         <Link href="/about">
-                        <button className="px-8 py-3 font-semibold transition-all duration-300 ease-in-out border rounded-md border-purple-500 text-purple-400 hover:scale-105 hover:text-purple-300 hover:bg-purple-500/10">
-                            Learn More
-                        </button></Link>
-                    </div>
-                </div>
+                            <button className="px-12 py-6 font-bold uppercase tracking-[0.2em] text-[10px] text-white/40 hover:text-white transition-colors border-b border-white/0 hover:border-white">
+                                Learn More
+                            </button>
+                        </Link>
+                    </motion.div>
+                </motion.div>
+            </div>
+
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-20">
+                 <div className="w-px h-20 bg-gradient-to-b from-transparent via-white to-transparent" />
             </div>
         </section>
     );
