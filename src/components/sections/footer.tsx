@@ -24,11 +24,11 @@ const Footer = () => {
               Intelligent Software Meets Elegant Engineering
             </p>
             <div className="space-y-2 pt-2">
-              <a href="tel:+917013558465" className="flex items-center gap-2 text-sm text-gray-400 hover:text-purple-400 transition-colors">
+              <a href="tel:+917013558465" className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
                 <Phone size={14} />
                 +91 70135 58465
               </a>
-              <a href="mailto:contact@zyxen.in" className="flex items-center gap-2 text-sm text-gray-400 hover:text-purple-400 transition-colors">
+              <a href="mailto:contact@zyxen.in" className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
                 <Mail size={14} />
                 contact@zyxen.in
               </a>
@@ -39,58 +39,58 @@ const Footer = () => {
             <h3 className="font-semibold text-white">Quick Links</h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <Link href="/about" className="hover:text-purple-400 transition-colors">
+                <Link href="/about" className="hover:text-white transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-purple-400 transition-colors">
+                <Link href="/services" className="hover:text-white transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                  <Link href="/blogs" className="hover:text-purple-400 transition-colors">
+                  <Link href="/blogs" className="hover:text-white transition-colors">
                     Blogs
                   </Link>
               </li>
               <li>
-                <a href="mailto:contact@zyxen.in" className="hover:text-purple-400 transition-colors">
+                <a href="mailto:contact@zyxen.in" className="hover:text-white transition-colors">
                   Help Center
                 </a>
               </li>
             </ul>
           </div>
 
-            <div className="space-y-4">
-              <h3 className="font-semibold text-white">Pages</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <Link href="/" className="hover:text-purple-400 transition-colors">
-                    Home
+          <div className="space-y-4">
+            <h3 className="font-semibold text-white">Pages</h3>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>
+                <Link href="/" className="hover:text-white transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-white transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/#crafted" className="hover:text-white transition-colors">
+                  Work
+                </Link>
+              </li>
+              <li>
+                  <Link href="/blogs" className="hover:text-white transition-colors">
+                    Blogs
                   </Link>
-                </li>
-                <li>
-                  <Link href="/about" className="hover:text-purple-400 transition-colors">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/#crafted" className="hover:text-purple-400 transition-colors">
-                    Work
-                  </Link>
-                </li>
-                <li>
-                    <Link href="/blogs" className="hover:text-purple-400 transition-colors">
-                      Blogs
-                    </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-purple-400 transition-colors">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
 
           <div className="space-y-4">
             <h3 className="font-semibold text-white">Social Media</h3>
@@ -100,7 +100,7 @@ const Footer = () => {
                   href="https://www.instagram.com/zyxen.in" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors"
+                  className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
                 >
                   <Instagram size={16} />
                   Instagram
@@ -111,7 +111,7 @@ const Footer = () => {
                   href="https://x.com/zyxen_in" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors"
+                  className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
                 >
                   <Twitter size={16} />
                   X (Twitter)
@@ -122,7 +122,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/zyxen/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors"
+                  className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
                 >
                   <Linkedin size={16} />
                   LinkedIn
@@ -133,7 +133,7 @@ const Footer = () => {
                   href="https://www.facebook.com/share/1BGNGdWE92/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors"
+                  className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
                 >
                   <Facebook size={16} />
                   Facebook
