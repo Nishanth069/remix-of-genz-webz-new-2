@@ -23,13 +23,13 @@ export default function AboutPage() {
       <div className="min-h-screen bg-black text-white antialiased selection:bg-purple-500 selection:text-white">
         <Header />
         <main>
-          {/* Hero Section */}
+            {/* Hero Section */}
             <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
               {/* Elegant Background elements */}
               <div className="absolute inset-0 z-0">
-                <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-[120px] animate-pulse" />
-                <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[150px]" />
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20" />
+                <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-purple-600/15 rounded-full blur-[120px]" />
+                <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[150px]" />
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30" />
               </div>
               
               <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
@@ -40,33 +40,31 @@ export default function AboutPage() {
                   className="space-y-12"
                 >
                   <motion.div variants={fadeInUp} className="flex justify-center">
-                    <span className="px-5 py-2 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold tracking-[0.4em] uppercase text-white/60">
+                    <span className="px-5 py-2 rounded-full border border-purple-500/20 bg-purple-500/5 text-[10px] font-bold tracking-[0.4em] uppercase text-purple-400">
                       The Zyxen Genesis
                     </span>
                   </motion.div>
                   
                   <motion.h1
                     variants={fadeInUp}
-                    className="text-6xl md:text-[8rem] font-bold tracking-tighter leading-[0.8] text-white"
+                    className="text-5xl md:text-[8rem] font-bold tracking-tighter leading-[0.85] text-white"
                   >
                     ENGINEERING <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/60">EMOTION.</span>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-purple-600">EMOTION.</span>
                   </motion.h1>
                 
                 <motion.p
                   variants={fadeInUp}
-                  className="text-lg md:text-2xl text-white/50 max-w-3xl mx-auto leading-relaxed font-light tracking-tight"
+                  className="text-base md:text-2xl text-white/50 max-w-3xl mx-auto leading-relaxed font-light tracking-tight px-4"
                 >
                   Born from a defiance of the ordinary. We build digital ecosystems that don't just process data—they command attention.
                 </motion.p>
               </motion.div>
             </div>
-            
-
           </section>
 
             {/* Our Story - The "Why" */}
-            <section className="py-12 bg-black relative overflow-hidden">
+            <section className="py-24 bg-black relative overflow-hidden">
               <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                   <motion.div 
@@ -78,7 +76,7 @@ export default function AboutPage() {
                   >
                     <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight text-white">
                       Why we <br />
-                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/60 italic">Started Zyxen.</span>
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-300 to-purple-600 italic">Started Zyxen.</span>
                     </h2>
                     <div className="space-y-6 text-white/40 text-lg md:text-xl font-light leading-relaxed">
                       <p>
