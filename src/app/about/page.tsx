@@ -66,7 +66,7 @@ export default function AboutPage() {
           </section>
 
             {/* Our Story - The "Why" */}
-            <section className="py-24 bg-black relative overflow-hidden">
+            <section className="py-12 bg-black relative overflow-hidden">
               <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                   <motion.div 
@@ -78,7 +78,7 @@ export default function AboutPage() {
                   >
                     <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-tight text-white">
                       Why we <br />
-                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-400/50 to-purple-800/50 italic">Started Zyxen.</span>
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/60 italic">Started Zyxen.</span>
                     </h2>
                     <div className="space-y-6 text-white/40 text-lg md:text-xl font-light leading-relaxed">
                       <p>
