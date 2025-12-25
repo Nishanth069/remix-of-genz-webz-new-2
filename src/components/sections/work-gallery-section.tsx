@@ -97,24 +97,24 @@ const WorkGallerySection: React.FC = () => {
   return (
     <section className="py-20 bg-black text-white relative">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center space-y-6 mb-24">
-            <motion.div 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="inline-block"
-            >
-              <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-purple-500 px-6 py-2 rounded-full border border-purple-500/20 bg-purple-500/5">Our Portfolio</span>
-            </motion.div>
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl md:text-7xl font-bold tracking-tighter"
-            >
-              CRAFTED BY <span className="italic text-purple-500">ZYXEN.</span>
-            </motion.h2>
+            <div className="text-center space-y-6 mb-24">
+              <motion.div 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                className="inline-block"
+              >
+                <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-white/40 px-6 py-2 rounded-full border border-white/10 bg-white/5">Our Portfolio</span>
+              </motion.div>
+              <motion.h2 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="text-4xl md:text-7xl font-bold tracking-tighter"
+              >
+                CRAFTED BY <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-400/50 to-purple-800/50">ZYXEN.</span>
+              </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
