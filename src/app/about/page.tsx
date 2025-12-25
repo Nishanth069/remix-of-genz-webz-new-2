@@ -45,23 +45,23 @@ export default function AboutPage() {
                     </span>
                   </motion.div>
                   
-                  <motion.h1
+                    <motion.h1
+                      variants={fadeInUp}
+                      className="text-4xl md:text-[8rem] font-bold tracking-tighter leading-[0.85] text-white"
+                    >
+                      ENGINEERING <br />
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-purple-500/50">EMOTION.</span>
+                    </motion.h1>
+                  
+                  <motion.p
                     variants={fadeInUp}
-                    className="text-5xl md:text-[8rem] font-bold tracking-tighter leading-[0.85] text-white"
+                    className="text-sm md:text-2xl text-white/50 max-w-3xl mx-auto leading-relaxed font-light tracking-tight px-4"
                   >
-                    ENGINEERING <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-purple-600">EMOTION.</span>
-                  </motion.h1>
-                
-                <motion.p
-                  variants={fadeInUp}
-                  className="text-base md:text-2xl text-white/50 max-w-3xl mx-auto leading-relaxed font-light tracking-tight px-4"
-                >
-                  Born from a defiance of the ordinary. We build digital ecosystems that don't just process data—they command attention.
-                </motion.p>
-              </motion.div>
-            </div>
-          </section>
+                    Born from a defiance of the ordinary. We build digital ecosystems that don't just process data—they command attention.
+                  </motion.p>
+                </motion.div>
+              </div>
+            </section>
 
             {/* Our Story - The "Why" */}
             <section className="py-24 bg-black relative overflow-hidden">
