@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 const CtaSection = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-purple-900/5 blur-[120px] opacity-20 -z-10" />
+    <section className="py-16 relative overflow-hidden">
+      <div className="absolute inset-0 bg-purple-900/5 blur-[120px] opacity-10 -z-10" />
       <div className="max-w-7xl mx-auto px-6 text-center space-y-12">
         <motion.h2 
           initial={{ opacity: 0, y: 40 }}
@@ -15,7 +15,7 @@ const CtaSection = () => {
           className="text-5xl md:text-[7rem] font-bold tracking-tighter leading-[0.9] text-white"
         >
           READY TO <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-400/50 to-purple-800/50">ASCEND?</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/60">ASCEND?</span>
         </motion.h2>
         
         <motion.div 
