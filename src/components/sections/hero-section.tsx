@@ -167,9 +167,7 @@ const HeroSection = () => {
                 </motion.div>
             </div>
 
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-20">
-                 <div className="w-px h-20 bg-gradient-to-b from-transparent via-white to-transparent" />
-            </div>
+
         </section>
     );
 };
