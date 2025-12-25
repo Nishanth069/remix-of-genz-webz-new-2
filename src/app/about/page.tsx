@@ -24,34 +24,34 @@ export default function AboutPage() {
         <Header />
         <main>
           {/* Hero Section */}
-          <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-            {/* Elegant Background elements */}
-            <div className="absolute inset-0 z-0">
-              <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px] animate-pulse" />
-              <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[150px]" />
-              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20" />
-            </div>
-            
-            <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={staggerContainer}
-                className="space-y-12"
-              >
-                <motion.div variants={fadeInUp} className="flex justify-center">
-                  <span className="px-5 py-2 rounded-full border border-purple-500/30 bg-purple-500/10 text-[10px] font-bold tracking-[0.4em] uppercase text-purple-400">
-                    The Zyxen Genesis
-                  </span>
-                </motion.div>
-                
-                <motion.h1
-                  variants={fadeInUp}
-                  className="text-6xl md:text-[9rem] font-bold tracking-tighter leading-[0.8] text-white"
+            <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+              {/* Elegant Background elements */}
+              <div className="absolute inset-0 z-0">
+                <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-[120px] animate-pulse" />
+                <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[150px]" />
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20" />
+              </div>
+              
+              <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+                <motion.div
+                  initial="hidden"
+                  animate="visible"
+                  variants={staggerContainer}
+                  className="space-y-12"
                 >
-                  ENGINEERING <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-400 to-purple-800">EMOTION.</span>
-                </motion.h1>
+                  <motion.div variants={fadeInUp} className="flex justify-center">
+                    <span className="px-5 py-2 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold tracking-[0.4em] uppercase text-white/60">
+                      The Zyxen Genesis
+                    </span>
+                  </motion.div>
+                  
+                  <motion.h1
+                    variants={fadeInUp}
+                    className="text-6xl md:text-[8rem] font-bold tracking-tighter leading-[0.8] text-white"
+                  >
+                    ENGINEERING <br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-purple-400/50">EMOTION.</span>
+                  </motion.h1>
                 
                 <motion.p
                   variants={fadeInUp}
