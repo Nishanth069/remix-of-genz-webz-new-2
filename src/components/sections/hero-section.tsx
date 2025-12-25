@@ -137,35 +137,36 @@ const HeroSection = () => {
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20" />
             </div>
             
-            <div className="relative z-10 px-6 py-20 text-center max-w-7xl mx-auto">
+            <div className="relative z-10 px-6 py-10 text-center max-w-7xl mx-auto">
                 <motion.div
                     initial="hidden"
                     animate="visible"
                     variants={staggerContainer}
-                    className="space-y-12"
+                    className="space-y-10"
                 >
                     <motion.div variants={fadeInUp} className="flex justify-center">
-                        <span className="px-5 py-2 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold tracking-[0.4em] uppercase text-white/60">
+                        <span className="px-5 py-2 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold tracking-[0.4em] uppercase text-white/40">
                             Innovation Hub 2025
                         </span>
                     </motion.div>
-  
+    
                     <motion.h1 
                         variants={fadeInUp}
                         className="text-6xl md:text-[8rem] font-bold tracking-tighter leading-[0.8] text-white"
                     >
                         ENGINEERING <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-purple-400/50">EXPERIENCES.</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/60">EXPERIENCES.</span>
                     </motion.h1>
 
                     <motion.p 
                         variants={fadeInUp}
-                        className="text-lg md:text-2xl text-white/50 max-w-3xl mx-auto leading-relaxed font-light tracking-tight"
+                        className="text-lg md:text-2xl text-white/40 max-w-3xl mx-auto leading-relaxed font-light tracking-tight"
                     >
                         We architect high-performance digital ecosystems where intelligence meets human elegance.
                     </motion.p>
                 </motion.div>
             </div>
+
 
 
         </section>
