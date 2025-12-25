@@ -65,7 +65,7 @@ export default function ServicesPage() {
             {/* Hero Section */}
             <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
               <div className="absolute inset-0 z-0">
-                <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px] animate-pulse" />
+                <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-[120px] animate-pulse" />
                 <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[150px]" />
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20" />
               </div>
@@ -78,17 +78,17 @@ export default function ServicesPage() {
                   className="space-y-12"
                 >
                   <motion.div variants={fadeInUp} className="flex justify-center">
-                    <span className="px-5 py-2 rounded-full border border-purple-500/30 bg-purple-500/10 text-[10px] font-bold tracking-[0.4em] uppercase text-purple-400">
+                    <span className="px-5 py-2 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold tracking-[0.4em] uppercase text-white/60">
                       Our Capabilities
                     </span>
                   </motion.div>
                   
                   <motion.h1
                     variants={fadeInUp}
-                    className="text-6xl md:text-[9rem] font-bold tracking-tighter leading-[0.8] text-white"
+                    className="text-6xl md:text-[8rem] font-bold tracking-tighter leading-[0.8] text-white"
                   >
                     ENGINEERED <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-400 to-purple-800">SUCCESS.</span>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-purple-400/50">SUCCESS.</span>
                   </motion.h1>
                   
                   <motion.p
@@ -101,7 +101,7 @@ export default function ServicesPage() {
               </div>
             </section>
 
-            <section className="py-40 bg-black">
+            <section className="py-24 bg-black">
               <div className="max-w-7xl mx-auto px-6">
                 <motion.div
                   initial="hidden"
@@ -114,26 +114,26 @@ export default function ServicesPage() {
                     <motion.div
                       key={index}
                       variants={fadeInUp}
-                      className="group relative p-12 rounded-[2.5rem] border border-white/10 bg-white/5 hover:bg-white/[0.08] hover:border-purple-500/50 transition-all duration-500"
+                      className="group relative p-10 rounded-[2.5rem] border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/10 transition-all duration-500 backdrop-blur-3xl"
                     >
                       <div className="relative z-10 space-y-8">
                         <div className="w-16 h-16 bg-black border border-white/5 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                          <service.icon className="w-8 h-8 text-purple-500" />
+                          <service.icon className="w-8 h-8 text-white/60 group-hover:text-white transition-colors" />
                         </div>
                         <div className="space-y-4">
-                          <h3 className="text-2xl font-bold text-white tracking-tight">{service.title}</h3>
-                          <p className="text-white/40 font-light leading-relaxed">{service.description}</p>
+                          <h3 className="text-2xl font-bold text-white tracking-tight leading-tight">{service.title}</h3>
+                          <p className="text-white/30 text-base font-light leading-relaxed">{service.description}</p>
                         </div>
                         <ul className="space-y-3 pt-4">
                           {service.features.map((feature, idx) => (
-                            <li key={idx} className="flex items-center gap-3 text-[11px] font-mono uppercase tracking-widest text-white/30 group-hover:text-purple-400 transition-colors">
-                              <div className="w-1 h-1 bg-purple-500 rounded-full" />
+                            <li key={idx} className="flex items-center gap-3 text-[10px] font-mono uppercase tracking-widest text-white/20 group-hover:text-white/60 transition-colors">
+                              <div className="w-1 h-1 bg-white/20 rounded-full group-hover:bg-purple-500/50" />
                               {feature}
                             </li>
                           ))}
                         </ul>
                       </div>
-                      <div className="mt-10 h-px w-12 bg-white/10 group-hover:w-full group-hover:bg-purple-500/30 transition-all duration-700" />
+                      <div className="mt-10 h-px w-12 bg-white/5 group-hover:w-full group-hover:bg-white/20 transition-all duration-700" />
                     </motion.div>
                   ))}
                 </motion.div>
@@ -141,18 +141,18 @@ export default function ServicesPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-40 relative overflow-hidden">
-               <div className="absolute inset-0 bg-purple-900/10 blur-[120px] opacity-30 -z-10" />
-              <div className="max-w-7xl mx-auto px-6 text-center space-y-16">
+            <section className="py-24 relative overflow-hidden">
+               <div className="absolute inset-0 bg-purple-900/5 blur-[120px] opacity-20 -z-10" />
+              <div className="max-w-7xl mx-auto px-6 text-center space-y-12">
                 <motion.h2 
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                  className="text-6xl md:text-[9rem] font-bold tracking-tighter leading-[0.85] text-white"
+                  className="text-5xl md:text-[7rem] font-bold tracking-tighter leading-[0.9] text-white"
                 >
                   LET'S BUILD <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-800">TOGETHER.</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-400/50 to-purple-800/50">TOGETHER.</span>
                 </motion.h2>
                 
                 <motion.div 
@@ -160,18 +160,18 @@ export default function ServicesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="flex flex-col sm:flex-row items-center justify-center gap-10 pt-10"
+                  className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-6"
                 >
                   <Link
                     href="/contact"
-                    className="group relative px-14 py-7 bg-white text-black font-bold uppercase tracking-[0.2em] text-[11px] rounded-full overflow-hidden hover:scale-105 transition-all"
+                    className="group relative px-10 py-5 bg-white text-black font-bold uppercase tracking-[0.2em] text-[10px] rounded-full overflow-hidden hover:scale-105 transition-all"
                   >
                     <span className="relative z-10">Initialize Project</span>
                     <div className="absolute inset-0 bg-purple-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                   </Link>
                   <Link
                     href="/#crafted"
-                    className="text-[11px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors border-b border-white/0 hover:border-white pb-2"
+                    className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors border-b border-white/0 hover:border-white pb-2"
                   >
                     Browse Portfolio
                   </Link>
