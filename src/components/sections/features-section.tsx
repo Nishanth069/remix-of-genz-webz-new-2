@@ -77,7 +77,7 @@ const featuresData: Feature[] = [
                 <div className={feature.layout === 'left' ? "order-2 space-y-4 md:space-y-8" : "order-2 md:order-1 space-y-4 md:space-y-8"}>
                   <div className="space-y-2 md:space-y-4">
                     <span className="text-white/40 font-bold text-[10px] uppercase tracking-[0.5em] border border-white/10 bg-white/5 px-4 py-1.5 rounded-full inline-block group-hover/feature:text-purple-400 group-hover/feature:border-purple-500/20 transition-colors">
-                      Phase 0{index + 1} / {feature.label}
+                       {feature.label}
                     </span>
                     <h3 className="text-3xl md:text-5xl font-bold text-white tracking-tighter leading-[1]">{feature.title}</h3>
                   </div>
