@@ -1,8 +1,8 @@
-import { NetlifyCmsOauthProvider } from "netlify-cms-oauth-provider-node";
+import OAuthProvider from "netlify-cms-oauth-provider-node";
 
-export const runtime = "nodejs"; // 🔴 THIS IS THE FIX
+export const runtime = "nodejs";
 
-const provider = new NetlifyCmsOauthProvider({
+const provider = new OAuthProvider({
   clientId: process.env.GITHUB_CLIENT_ID,
   clientSecret: process.env.GITHUB_CLIENT_SECRET,
 });
