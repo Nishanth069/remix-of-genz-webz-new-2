@@ -1,8 +1,9 @@
-import OAuthProvider from "netlify-cms-oauth-provider-node";
-
 export const runtime = "nodejs";
 
-const provider = new OAuthProvider({
+// 👇 force CommonJS require
+const OAuthProvider = require("netlify-cms-oauth-provider-node");
+
+const provider = OAuthProvider({
   clientId: process.env.GITHUB_CLIENT_ID,
   clientSecret: process.env.GITHUB_CLIENT_SECRET,
 });
