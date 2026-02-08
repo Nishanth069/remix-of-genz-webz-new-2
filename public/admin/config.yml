@@ -1,9 +1,10 @@
 backend:
   name: github
-  repo: Nishanth069/remix-of-genz-webz-new-2
+  repo: Nishanth069/remix-of-genz-webz-new-69
   branch: main
   base_url: https://remix-of-genz-webz-new-69.vercel.app
   auth_endpoint: /api/auth
+
 
 # ❌ REMOVE local_backend (important for prod)
 # local_backend: true
