@@ -1,8 +1,12 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Team-Zyxen/remix-of-genz-webz-new
   branch: main
+  base_url: https://remix-of-genz-webz-new-2.vercel.app
+  auth_endpoint: /api/auth
 
-local_backend: true
+# ❌ REMOVE local_backend (important for prod)
+# local_backend: true
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
@@ -41,4 +45,3 @@ collections:
                   - "Technical Guides"
               - { label: "Featured", name: "featured", widget: "boolean", default: false }
               - { label: "Published", name: "published", widget: "hidden", default: true }
-
