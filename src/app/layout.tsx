@@ -51,10 +51,14 @@ export const metadata: Metadata = {
     canonical: "https://zyxen.in",
   },
   icons: {
-    icon: "/previews/logo.png",
-    shortcut: "/previews/logo.png",
-    apple: "/previews/logo.png",
-  },
+  icon: [
+    { url: "/favicon.ico" },
+    { url: "/favicon.png", type: "image/png" },
+  ],
+  shortcut: "/favicon.ico",
+  apple: "/favicon.png",
+},
+
     openGraph: {
       title: "ZYXEN – Digital Solutions & Creative Agency",
       description:

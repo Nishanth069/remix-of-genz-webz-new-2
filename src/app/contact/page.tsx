@@ -247,7 +247,7 @@ export default function ContactPage() {
                             value={formData.phone}
                             onChange={handleChange}
                             required
-                            placeholder="+1 (---) --- ----"
+                            placeholder="+91 ----- -----"
                             className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder-white/10 transition-all focus:border-purple-500/50 focus:bg-white/[0.07] focus:outline-none focus:ring-0"
                           />
                         </div>
