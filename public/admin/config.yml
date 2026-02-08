@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Team-Zyxen/remix-of-genz-webz-new
+  repo: Nishanth069/remix-of-genz-webz-new-2
   branch: main
   base_url: https://remix-of-genz-webz-new-2.vercel.app
   auth_endpoint: /api/auth
